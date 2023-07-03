@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body {
+    background-color: #F9F9F9;
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+    box-shadow: none;
+}
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    min-height: 90vh;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    background-color: #F9F9F9;
+}
+
+
+/* INICIO CONFIG TEXTOS */
+
+.titulo-maior {
+    font-size: 64px;
+    font-weight: 400;
+}
+
+.titulo-pag {
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 52px;
+    font-weight: 100;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.texto-grande {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.texto-corrido-bold {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* INICIO BOTAO MENU */
+
+.btn-principal {
+    color: #fff;
+    padding: 8px;
+    background-color: #B00020;
+}
+
+.btn-principal:hover {
+    color: #B00020;
+    background-color: transparent;
+    border-color: #B00020;
+    transition: 0.6s ease;
+}
+
+.btn-secundario {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.btn-secundario:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+/* FIM BOTAO */
+
+
+/* INICIO BOTÃO CONTATO */
+
+.btn-contato {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    
+}
+
+.icon-container {
+    width: 100%;
+    height: 50px;
+}
+
+.icon {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    overflow: hidden;
+    color: #272727;
+}
+
+.icon:hover{
+    color: #F9F9F9;
+}
+
+.icon-contato {
+    position: relative;
+    font-size: 20px;
+    margin-top: 10px;
+    transition: all 0.25s ease;
+}
+
+.icon:before,
+.icon:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.25s ease;
+    border-radius: 30px;
+}
+
+.icon-fill:before {
+    transition-duration: 0.5s;
+    box-shadow: inset 0 0 0 1px #fff;
+}
+
+.icon-fill:hover:before {
+    box-shadow: inset 0 0 0 60px #B00020;
+}
+
+
+/* FIM BOTÃO CONTATO */
+
+/* INICIO BOTÃO DIVISOR */
+
+.icon-divisor{
+    font-Size: "3rem";
+    color: "#363636";
+}
+/* FIM BOTÃO CONTATO */
+
+
+
+/* INICIO MENU */
+.nav-link:hover {
+    transition: 0.3s ease;
+    color: #B00020;
+    width: 100%;
+}
+
+
+/* FIM MENU */
+
+
+/* INICIO MENU */
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    z-index: 999;
+    background: #F9F9F9;
+    transition: all 0.3s;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar.active {
+    right: 0;
+}
+
+#dismiss {
+    width: 35px;
+    height: 35px;
+    text-align: start;
+    background: #F9F9F9;
+    margin-right: 5%;
+    right: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    color: #272727;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-weight: 700;
+    display: block;
+    color: #272727;
+    text-align: end;
+}
+
+#sidebar ul li a:hover {
+    color: #B00020;
+}
+
+/* FINAL MENU */
+
+
+/* INICIO CARD CERTIFICADOS */
+
+.cards:hover .card-titulo {
+    color: #B00020;
+    transition: 0.3s ease;
+}
+
+.cards {
+    position: relative;
+    cursor: pointer;
+    color: #272727;
+}
+
+.cards:after,
+.cards:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 4px;
+    transition: transform .3s ease-in-out;
+}
+
+.cards:before {
+    border-left: 1px solid #B00020;
+    border-right: 1px solid #B00020;
+    transform: scaleY(0);
+}
+
+.cards:after {
+    border-top: 1px solid #B00020;
+    border-bottom: 1px solid #B00020;
+    transform: scaleX(0);
+}
+
+.cards:hover:before {
+    transform: scaleY(1);
+}
+
+.cards:hover:after {
+    transform: scaleX(1);
+}
+
+
+/* Controles de tela */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .col-lg-2 {
+        width: 19%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .col-lg-2 {
+        width: 25%;
+    }
+}
+
+@media (max-width: 575px) {
+    .card-centralizado {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
